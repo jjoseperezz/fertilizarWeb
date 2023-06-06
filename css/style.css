@@ -31,6 +31,7 @@ header {
   background-color: #444444;
   padding: 10px;
   text-align: center;
+
 }
 
 .logo {
@@ -58,7 +59,6 @@ header {
 /* Estilos del contenido principal */
 main {
   text-align: center;
-  margin-top: 20px;
 }
 
 .video {
@@ -69,21 +69,48 @@ main {
 
 .video iframe {
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
 
-.boton {
-  margin-top: 20px;
-}
-
 /* Estilos de la sección aside */
 .informacion-abajo-video{
-  background-color: aqua;
-  position: center;
+  border: 1px solid black; 
+  padding:5px; 
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
 }
+.trigo-1{
+  border: 2px solid black;
+}
+.trigo-1 img{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width:284px;
+  text-align: center;
+  
+}
+.cuerpo-trigo-1{
+  text-align: left;
+}
+
+
+
+
+.trigo-2{
+  border: 2px solid black;
+}
+
+.cuerpo-trigo-2{
+  text-align: left;
+}
+.trigo-2 img{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width:284px;
+  text-align: center;
+}
+
 
 /* Estilos del pie de página */
 footer {
@@ -225,15 +252,16 @@ footer {
 }
 
 /* ------------------------------------------ */
-.body-product {
-  display: grid;
+.body-product {display: grid;
+  grid-template-columns: 1fr 1fr 1.1fr;
+  grid-template-rows: 0.8fr 1.8fr 1fr 0.8fr;
   grid-auto-columns: 1fr;
-  grid-template-columns: 0.9fr 1.1fr 1fr;
-  grid-template-rows: 0.6fr 2.4fr 0.4fr;
   gap: 5px 5px;
+  grid-auto-flow: row;
   grid-template-areas:
     "menu menu menu"
     "video video video"
+    "main main main"
     "footer footer footer";
 }
 
@@ -245,7 +273,7 @@ header {
   grid-area: video;
 }
 
-.aside-container {
+.informacion-abajo-video {
   grid-area: main;
 }
 
